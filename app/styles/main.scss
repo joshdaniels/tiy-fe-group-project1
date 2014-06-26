@@ -32,7 +32,7 @@ header {
     }
   
 }
-#headerContent{
+  #headerContent{
 
   @include outer-container;
       @include highlightbk;
@@ -62,7 +62,7 @@ header {
         @include highlightr;
         height: 50px;
       }
-}
+  }
 
 
  
