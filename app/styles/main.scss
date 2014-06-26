@@ -1,25 +1,130 @@
 
 @import 'bourbon/bourbon';
-
+@import '../../bower_components/neat/app/assets/stylesheets/neat';
+@import 'mixin';
 
 body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+  width: 1024px;
+  height: auto;
+  @include highlightbk;
+  margin: 0 auto;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+header {
+  @include outer-container;
+  height: 100PX;
+  
+  @include highlightbk;
+  
+    #logo {
+      @include span-columns(4);
+      height: 100px;
+      @include highlightr;
+      float: left;
+      text-align: center;
+    }
+    #social {
+      @include span-columns(4);
+      height: 100px;
+      @include highlightbl;
+      float: right;
+      text-align: center;
+    }
+  
 }
+#headerContent{
+
+  @include outer-container;
+      @include highlightbk;
+      text-align: center;
+      #headerImage {
+        display: block;
+        @include span-columns(12);
+        @include highlightr;
+        height: 50px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+      }
+      #news {
+        @include span-columns(4);
+        display: inline;
+        @include highlightbl;
+        height: 50px;
+        margin-bottom: 15px;
+      }
+      #specials {
+        @include span-columns(4);
+        @include highlightbk;
+        height: 50px;
+      }
+      #location {
+        @include span-columns(4);
+        @include highlightr;
+        height: 50px;
+      }
+}
+
+
+ 
+
+    #bodyLeftContainer {
+      @include span-columns(8);
+      @include highlightbl;
+      text-align: center;
+
+       #menu {
+        @include span-columns(4);
+        @include highlightbl;
+        @include row(table);
+        height: 100px;
+        margin-top: 15px;
+      
+      }
+      #appetizers {
+        @include span-columns(4);
+        @include highlightr;
+        @include row(table);
+        height: 100px;
+     
+        }
+      #entrees {
+        @include span-columns(4);
+        @include highlightbk;
+        @include row(table);
+        height: 100px;  
+    
+      }
+      #sides {
+        @include span-columns(4);
+        @include highlightbl;
+        @include row(table);
+        height: 100px;
+        
+        }
+    }    
+    
+
+    #bodyRightContainer{
+      @include outer-container;
+      @include highlightbl;
+      margin-top: 15px;
+      #foodImages {
+        @include span-columns(4);
+        @include highlightbk;
+        text-align: center;
+        height: 400px;
+
+      }
+    } 
+
+    footer {
+      @include highlightbl;
+      @include row(display, block);
+      #footercontainer {
+       @include span-columns(12);
+       margin-top: 15px;
+        @include highlightbk; 
+        text-align: center;
+        height: 80px; 
+      }
+    }
